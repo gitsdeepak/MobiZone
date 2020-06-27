@@ -47,11 +47,11 @@ Ecommerce Capstone Project
 
         <!-- database properties DataSource -->
              
-              <property name="hibernate.dialect">..................YOUR DB DIALECT........</property>
-              <property name="hibernate.connection.driver_class">..YOUR DRIVER CLASS........</property>
-              <property name="hibernate.connection.url">...........YOUR CONNECTION URL..........</property>
-              <property name="hibernate.connection.username">......YOUR CONNECTION USERNAME........</property>
-              <property name="hibernate.connection.password">......YOUR CONNECTION PASSWORD..........</property>
+              <property name="hibernate.dialect">..................YOUR DB DIALECT...........</property>
+              <property name="hibernate.connection.driver_class">..YOUR DB DRIVER CLASS........</property>
+              <property name="hibernate.connection.url">...........YOUR DB CONNECTION URL..........</property>
+              <property name="hibernate.connection.username">......YOUR DB CONNECTION USERNAME........</property>
+              <property name="hibernate.connection.password">......YOUR DB CONNECTION PASSWORD..........</property>
               <property name="hibernate.show_sql">true</property>
               <property name="hibernate.hbm2ddl.auto">update</property>
 
@@ -68,13 +68,13 @@ or take it as a task and 🧑‍💻 resolve it 💪 --> create a PullRequest �
 
 # About work and achievement
 
-- [x] home page layout have completed and responsive as well
-- [x] complete ID (Sign In & Sign Up) page
-- [x] user account
-- [ ] Product page
+- [ ] Home page layout have completed and responsive as well
+- [x] Complete ID (Sign In & Sign Up) page
+- [ ] User account
+- [x] Product page
   - [x] Main design
   - [ ] Images Grid
-  - [ ] function and requirements(list)
+  - [ ] Function and Requirements(list)
 
 ## Preview of web pages
 You can see my web page below :
