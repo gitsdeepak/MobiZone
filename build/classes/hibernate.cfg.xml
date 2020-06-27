@@ -1,0 +1,25 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+      "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.SQLServer2012Dialect</property>
+    <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databasename=mobizone</property>
+    <property name="hibernate.connection.username">sa</property>
+    <property name="hibernate.connection.password">sql2012</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <!--  mapping for annotated classes -->
+   
+    <mapping class="com.niit.shoppingdemoservlet.model.Customer"/>
+    <mapping class="com.niit.shoppingdemoservlet.model.Category"/>
+    <mapping class="com.niit.shoppingdemoservlet.model.Product"/>
+    <mapping class="com.niit.shoppingdemoservlet.model.Sales"/>
+    <mapping class="com.niit.shoppingdemoservlet.model.Cart"/>
+   
+  </session-factory>
+</hibernate-configuration>
+
+
+
+<!-- jdbc:sqlserver://DDESKTOP-63LVB4\SQLEXPRESS:1433;databaseName=mobizone -->
