@@ -76,15 +76,15 @@ or take it as a task and 🧑‍💻 resolve it 💪 --> create a PullRequest �
   - [ ] Images Grid
   - [ ] function and requirements(list)
 
-## preview of web page
-you can see my web page below :
-- [Home page](https://ayushmaanjain.github.io/e-commerce/)
-- [Sign-In page](https://ayushmaanjain.github.io/e-commerce/ID.html?login)
-- [Sign-Up page](https://ayushmaanjain.github.io/e-commerce/ID.html?register)
-- [User-Account setting page](https://ayushmaanjain.github.io/e-commerce/account.html?user)
-- [User-Account cart page](https://ayushmaanjain.github.io/e-commerce/account.html?cart)
-- [User-Account transection/purchases page](https://ayushmaanjain.github.io/e-commerce/account.html?transection)
-- [Product page](https://ayushmaanjain.github.io/e-commerce/Product.html)
+## Preview of web pages
+You can see my web page below :
+- [Home page](https://gitsdeepak.github.io/mobizone/)
+- [Sign-In page](https://gitsdeepak.github.io/mobizone/ID.html?login)
+- [Sign-Up page](https://gitsdeepak.github.io/mobizone/ID.html?register)
+- [User-Account setting page](https://gitsdeepak.github.io/mobizone/account.html?user)
+- [User-Account cart page](https://gitsdeepak.github.io/mobizone/account.html?cart)
+- [User-Account transection/purchases page](https://gitsdeepak.github.io/mobizone/account.html?transection)
+- [Product page](https://gitsdeepak.github.io/mobizone/Product.html)
 
 ***Please suggest me any improvement or any change.***
 
