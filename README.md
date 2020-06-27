@@ -78,11 +78,11 @@ or take it as a task and 🧑‍💻 resolve it 💪 --> create a PullRequest �
 
 ## Preview of web pages
 You can see my web page below :
-- [Home page](https://gitsdeepak.github.io/mobizone/)
-- [Sign-In page](https://gitsdeepak.github.io/mobizone/login.jso)
-- [Sign-Up page](https://gitsdeepak.github.io/mobizone/register.jsp)
-- [User-Account cart page](https://gitsdeepak.github.io/mobizone/cart.jsp)
-- [Product page](https://gitsdeepak.github.io/mobizone/product.jsp)
+- [Home page](https://gitsdeepak.github.io/MobiZone/)
+- [Sign-In page](https://gitsdeepak.github.io/MobiZone/login.jso)
+- [Sign-Up page](https://gitsdeepak.github.io/MobiZone/register.jsp)
+- [User-Account cart page](https://gitsdeepak.github.io/MobiZone/cart.jsp)
+- [Product page](https://gitsdeepak.github.io/MobiZone/product.jsp)
 
 ***Please suggest me any improvement or any change.***
 
