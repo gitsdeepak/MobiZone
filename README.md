@@ -62,9 +62,9 @@ Ecommerce Capstone Project
 If you find that something's wrong with this package, you can let me know by raising an issue on the GitHub issue tracker, 
 or take it as a task and 🧑‍💻 resolve it 💪 --> create a PullRequest 🛠.
 
-#### Contribution
+##### Contribution
 
-Contributors are most welcome.
+***Contributors are most welcome.***
 
 # About work and achievement
 
