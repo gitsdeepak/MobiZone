@@ -16,7 +16,7 @@ Ecommerce Capstone Project
 
 ### Tools and Technologies:
 
-* **Languages** : JSP, Java, Hibernate, Bootstrap.
+* **Technology** : JSP, Java, Hibernate, Bootstrap.
 * **Application Servicer**: Apache Tomcat Server 9
 * **Database** : SQL Server 2012.
 
@@ -79,12 +79,10 @@ or take it as a task and 🧑‍💻 resolve it 💪 --> create a PullRequest �
 ## Preview of web pages
 You can see my web page below :
 - [Home page](https://gitsdeepak.github.io/mobizone/)
-- [Sign-In page](https://gitsdeepak.github.io/mobizone/ID.html?login)
-- [Sign-Up page](https://gitsdeepak.github.io/mobizone/ID.html?register)
-- [User-Account setting page](https://gitsdeepak.github.io/mobizone/account.html?user)
-- [User-Account cart page](https://gitsdeepak.github.io/mobizone/account.html?cart)
-- [User-Account transection/purchases page](https://gitsdeepak.github.io/mobizone/account.html?transection)
-- [Product page](https://gitsdeepak.github.io/mobizone/Product.html)
+- [Sign-In page](https://gitsdeepak.github.io/mobizone/login.jso)
+- [Sign-Up page](https://gitsdeepak.github.io/mobizone/register.jsp)
+- [User-Account cart page](https://gitsdeepak.github.io/mobizone/cart.jsp)
+- [Product page](https://gitsdeepak.github.io/mobizone/product.jsp)
 
 ***Please suggest me any improvement or any change.***
 
