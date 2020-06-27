@@ -6,7 +6,7 @@ Ecommerce Capstone Project
 
 ### Functionalities:
 
-1. User Registeration
+1. User Registration
 
 2. **CRUD Operations** like
 
