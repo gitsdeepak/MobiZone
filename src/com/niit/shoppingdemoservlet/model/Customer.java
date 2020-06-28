@@ -11,26 +11,38 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Customer")
 public class Customer implements Serializable {
-	private static final long serialVersionUID = 1L;
+
 	public Customer() {}
 	@Id
 	@GeneratedValue
 	(strategy=GenerationType.IDENTITY)
 	private int customerId;
-	@Column(unique=true)
+	/* @Column(unique=true) */
 	private String firstname;
 	private String lastname;
 	private String gender;
 	private String username;
 	private String password;
 	private String email;
-	@Column(length = 10, name="phone")
+	/*s*/
 	private long phone;
-	private String answer;
-	private String address;
-	private String role;
+	/* private String answer; */
+	/* private String address; */
+	private String role="USER";
 	
 	
+	/**
+	 * @return the role
+	 */
+	public String getRole() {
+		return role;
+	}
+	/**
+	 * @param role the role to set
+	 */
+	public void setRole(String role) {
+		this.role = role;
+	}
 	/**
 	 * @return the customerId
 	 */
@@ -121,29 +133,10 @@ public class Customer implements Serializable {
 	public void setPhone(long phone) {
 		this.phone = phone;
 	}
-	public String getAnswer() {
-		return answer;
-	}
-	public void setAnswer(String answer) {
-		this.answer = answer;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role)
-	{
-		if(role == null)
-			this.role="ROLE_USER";
-		
-		else
-			this.role = role;
-	}
-	
+
+	/*
+	 * public String getAddress() { return address; } public void setAddress(String
+	 * address) { this.address = address; }
+	 */
 	
 }
