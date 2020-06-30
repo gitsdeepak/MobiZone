@@ -3,6 +3,7 @@ package com.niit.shoppingdemoservlet.dao;
 import java.util.List;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -16,14 +17,13 @@ public class CustomerDaoImpl implements CustomerDao {
 	@Override
 	public boolean addCustomer(Customer c) {
 		
-		try{
+	try{
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();	
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
 		session.save(c);
 		session.flush();
 		tx.commit();
-	
 		
 		return true;
 	}
@@ -91,15 +91,27 @@ public boolean updateCustomer (Customer c) {
 }*/
 
 @Override
-public boolean validate (String emailid, String password) {
+public boolean validate (String e, String password) {
+	try {
 	SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 	Session session = sessionFactory.openSession();
 	Transaction tx = session.beginTransaction();
-	session.update(emailid, password);
-	session.flush();
-	tx.commit();
+	Query query=session.createQuery("from Customer where email=:id and password=:pass");
+	query.setParameter("id", e);
+	query.setParameter("pass", password);
 	
+	 Customer c=(Customer) query.uniqueResult();
+	 tx.commit();
+	 if(c!=null)
+
 	return true;
+	 else
+		 return false;
+	}
+	catch(HibernateException ex)
+	{return false;
+	}
+	
 }
 
 @Override
@@ -118,9 +130,21 @@ public boolean updateCustomer(Customer c) {
 */
 
 @Override
-public Customer findByEmail(String email, String password) {
-	// TODO Auto-generated method stub
-	return null;
+public Customer findByEmail(String email) {
+	try{
+		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();	
+	    Session session = sessionFactory.openSession();
+	    Transaction tx = session.beginTransaction();
+	    Query query=session.createQuery("from Customer where email=:id");
+	    query.setParameter("id", email);
+	    Customer c=(Customer) query.uniqueResult(); 
+	
+	    return c;
+	}
+	 catch(HibernateException ex)
+	{
+		return null;
+	}
 }
 
 @Override

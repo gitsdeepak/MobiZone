@@ -1,6 +1,7 @@
 package com.niit.shoppingdemoservlet.categoryoperation;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import com.niit.shoppingdemoservlet.dao.CategoryDao;
 import com.niit.shoppingdemoservlet.dao.CategoryDaoImpl;
+import com.niit.shoppingdemoservlet.model.Category;
 
 @WebServlet("/GetAllCategory")
 public class GetAllCategory extends HttpServlet {
@@ -33,20 +35,21 @@ public class GetAllCategory extends HttpServlet {
 		{
 			try 
 			{
-				CategoryDao  = new CategoryDaoImpl();
+				CategoryDao dao = new CategoryDaoImpl();
 				httpSession = request.getSession(false);
 				RequestDispatcher rd=null;
+				List<Category> category = dao.getAllCategory();
 				
-				if(httpSession != null)
+				if(category!= null)
 					httpSession.setAttribute("categories", CategoryDao.getAllCategory());
 
-				rd = request.getRequestDispatcher("/category.jsp");
+				rd = request.getRequestDispatcher("category.jsp");
 				rd.forward(request, response);
 			}
 			
 			catch (Exception e) 
 			{
-				System.out.println("-------- INSIDE GETALLPRODUCTS.JAVA CATCH --------");
+				System.out.println("-------- INSIDE GETALLCATEGORY.JAVA CATCH --------");
 				e.printStackTrace();
 			}
 		}

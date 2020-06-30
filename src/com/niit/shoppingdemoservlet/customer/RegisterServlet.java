@@ -31,18 +31,28 @@ public class RegisterServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		
+			}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String firstname = request.getParameter("firstname");
 		String lastname = request.getParameter("lastname");
+		String gender = request.getParameter("gender");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		String email = request.getParameter("email");
 		String phone = request.getParameter("phone");
 		long phn=Long.parseLong(phone);
 		
+		
 		Customer c=new Customer();
 		
 		c.setFirstname(firstname);
 		c.setLastname(lastname);
+		c.setGender(gender);
 		c.setUsername(username);
 		c.setPassword(password);
 		c.setEmail(email);
@@ -54,7 +64,7 @@ public class RegisterServlet extends HttpServlet {
 		
 	  try
 	  {	
-		if /*(dao.addCustomer(c) == 1)*/(dao.addCustomer(c))
+		if (dao.addCustomer(c))
 		{
 			System.out.println("User added");
 			
@@ -63,8 +73,9 @@ public class RegisterServlet extends HttpServlet {
 			
 			HttpSession httpSession = request.getSession();
 			httpSession.setAttribute("message", "Registration Successfull !! User id is " +customerId);
-			
-			response.sendRedirect("register.jsp");
+				/*
+				 * response.forward("register.jsp");
+				 */
 		}
 		else
 		{
@@ -83,16 +94,7 @@ public class RegisterServlet extends HttpServlet {
 		   System.out.println("------ EXCEPTION FROM SIGNUP.JAVA ------");
 		   e.printStackTrace();
 	  }
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doPost(request, response);
-	}
+}
 	
 	
 

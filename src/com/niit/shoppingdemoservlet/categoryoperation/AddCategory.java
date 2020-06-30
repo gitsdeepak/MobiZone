@@ -35,7 +35,7 @@ public class AddCategory extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		RequestDispatcher rd = null;
+		RequestDispatcher rd;
 		
 		categoryName		= request.getParameter("categoryName");
 		category			= new Category();
@@ -48,14 +48,17 @@ public class AddCategory extends HttpServlet {
 		try 
 		{
 			if(categoryDao.addCategory(category)) 
-		
-			    request.getRequestDispatcher("/GetAllCategory").forward(request, response);
+			{
+				System.out.println("Category added");
+			   rd=request.getRequestDispatcher("/GetAllCategory");
+			   rd.forward(request, response);
 			
-			
-			
+		    }
 			else 
+			{
 				rd = request.getRequestDispatcher("/GetAllCategory");
 				rd.forward(request, response);
+			}		
 		}
 		
 		catch (Exception e) 
@@ -64,11 +67,11 @@ public class AddCategory extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-	
+		
+
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		super.doPost(request, response);
+		
 	}
-
 }

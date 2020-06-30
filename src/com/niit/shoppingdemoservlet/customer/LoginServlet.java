@@ -29,27 +29,7 @@ import com.niit.shoppingdemoservlet.model.Sales;
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private String id;
-	private String password;
-	private CustomerDao customerDao;
-	private Customer customer;
-	private HttpSession httpSession;
-	private String userName;
-	private ProductDao productDao;
-	private CategoryDao categoryDao;
-	private int cartQuantity;
-	private List<Cart> cartProducts;
-	private List<Sales> sales;
-	private long cartAmount;
-	
-	private boolean isNumber(String id)
-	{
-		for(char ch:id.toCharArray())
-			if(!Character.isDigit(ch))
-				return false;
-	
-		return true;
-	}
+
 	       
     /**
      * @see HttpServlet#HttpServlet()
@@ -63,130 +43,63 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		
+	}
+		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		response.setContentType("text/html");  
+				response.setContentType("text/html");  
 	    PrintWriter out = response.getWriter();
+	    
+	    //HttpSession httpSession=request.getSession();
 	  
-	    String email = request.getParameter("email");
-	    String password = request.getParameter("password");
+	    String e = request.getParameter("email");
+	    String p = request.getParameter("password");
 	    
-	    Customer c = new Customer();
+	    Customer customer = new Customer();
 	    
-	    c.setEmail(email);
-	    c.setPassword(password);
+	    
+	    customer.setEmail(e);
+	    customer.setPassword(p);
+	    
+	    CustomerDao cdao=new CustomerDaoImpl();
+	    Customer c=cdao.findByEmail(e);
 	    
 	    RequestDispatcher rd=null;
-		if(email.equalsIgnoreCase(email) && password.equalsIgnoreCase(password))
-		{
-			System.out.println("Login Successfull.");
-			rd=request.getRequestDispatcher("index.jsp");
-			rd.forward(request, response);
+		//httpSession.setAttribute("current-user",customer	
+	    /*
+		 * &&(customer.getRole().equals("ADMIN"))
+		 * 
+		 * 
+		 * && c.getRole().trim().equals("ADMIN")
+		 * 
+		 */
 			
-			//login
-			httpSession.setAttribute("current-user",customer);
-			
-			if (customer.getRole().equals("admin"))	{
-				//admin:-admin.jsp
-				response.sendRedirect("admin.jsp");
-			} else if (customer.getRole().equals("normal")) {
-				//normal:-normal.jsp
-				response.sendRedirect("normal.jsp");
-			}
 		
-		else {
-			System.out.println("Your have entered a wrong email id or password!");
-			rd=request.getRequestDispatcher("error.jsp");
-			rd.include(request, response);
+			if (cdao.validate(e, p))
+			{	
+				HttpSession httpSession=request.getSession();
+				httpSession.setAttribute("current-user",customer);
+				/* System.out.println(c.getRole()); */
+				
+				if(c.getRole().trim().equals("ADMIN")) {
+				rd=request.getRequestDispatcher("admin.jsp");
+				 rd.forward(request, response);
+			} 	
+			
+		   else
+		   {
+			 System.out.println("Your have entered a wrong email id or password!");
+			 rd=request.getRequestDispatcher("index.jsp");
+			 rd.include(request, response);
+		   }	
+	    }
+		/*catch (Exception exception)
+		  {
+			   System.out.println("------ EXCEPTION FROM SIGNIN.JAVA ------");
+			   exception.printStackTrace();
+		  }*/
 		}
 	}
-		
-	   /* try
-		 {
-				id			= request.getParameter("email");
-				password	= request.getParameter("password");
-				customerDao = new CustomerDaoImpl(); 
-				RequestDispatcher rd=null;
-				
-				if(isNumber(id))
-					customer = customerDao.findByNumber(Long.parseLong(id), password);
-				
-				else
-					customer = customerDao.findByEmail(id, password);
-							
-				if(customer == null)
-				{
-					rd = request.getRequestDispatcher("/login.jsp");
-					rd.forward(request, response);
-				}
-			
-				else
-				{
-					userName = customer.getFirstname(); 
-					categoryDao = new CategoryDaoImpl();
-					
-					if(customer.getRole().equals("ROLE_ADMIN"))
-					{
-						httpSession  = request.getSession();
-						productDao   = new ProductDaoImpl();
-						
-						httpSession.setAttribute("role",userName);
-						httpSession.setAttribute("indexRef", "admin.jsp");
-						httpSession.setAttribute("login", "");
-						httpSession.setAttribute("categories", categoryDao.getAllCategory());
-						httpSession.setAttribute("customers", customerDao.getAllCustomers());
-						httpSession.setAttribute("products", productDao.getAllProducts());
-						httpSession.setAttribute("email", customer.getEmail());
-						httpSession.setAttribute("categories", categoryDao.getAllCategory());
-						httpSession.setAttribute("sales", productDao.getSales());
-						
-						//httpSession.setMaxInactiveInterval(10);
-						rd = request.getRequestDispatcher("/admin.jsp");
-						rd.forward(request, response);
-					}
-				
-					else if(customer.getRole().equals("ROLE_USER"))
-					{
-						httpSession  = request.getSession();
-						cartProducts = new ArrayList<Cart>();
-						cartQuantity = 0;
-						cartAmount	 = 0L;
-						
-						httpSession.setAttribute("login", "");
-						httpSession.setAttribute("role",userName);
-						httpSession.setAttribute("indexRef", "index.jsp");
-						httpSession.setAttribute("email", customer.getEmail());
-						httpSession.setAttribute("categories", categoryDao.getAllCategory());
-						httpSession.setAttribute("cartProducts", cartProducts);
-						httpSession.setAttribute("cartQuantity", cartQuantity);
-						httpSession.setAttribute("cartAmount", cartAmount);
-						
-						//httpSession.setMaxInactiveInterval(10);
-						rd=request.getRequestDispatcher("/index.jsp");
-						rd.forward(request, response);
-					}
-				}//else
-			
-			}
-			
-			catch (Exception e) 
-			{
-				e.printStackTrace();
-			}	 
-		 }	
-		*/
-		
-		
-	 } 
-	 
 
-	/**
-	 * @param customerDao 
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-
-}
+	

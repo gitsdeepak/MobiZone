@@ -46,7 +46,7 @@ public class UpdateCustomer extends HttpServlet
 			c.setPhone(phone);
 			c.setEmail(email);
 			c.setPassword(password);
-			c.setAnswer(answer);
+		
 			
 			status = customerDao.update(c, oldEmail);
 			

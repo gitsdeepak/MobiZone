@@ -2,6 +2,7 @@ package com.niit.shoppingdemoservlet.customer;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,18 +19,22 @@ public class Logout extends HttpServlet
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-        HttpSession session = request.getSession(false);
-	
-	   {
 		response.setContentType("text/html");
 		httpSession=request.getSession(false);
+		RequestDispatcher rd;
 		
-		if(httpSession != null) {
-			httpSession.removeAttribute("customer");
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
+        response.setHeader("Pragma", "no-cache"); // HTTP 1.0.
+        response.setDateHeader("Expires", 0); //*/
+        		
+		if(httpSession != null)
+			httpSession.invalidate();
 		
-		request.getRequestDispatcher("/login.jsp").forward(request, response);
-	
-		}
-     } 
-  }
-}
+		 rd = request.getRequestDispatcher("/UpdateApplication");
+		 rd.include(request, response);
+		 
+		 rd=request.getRequestDispatcher("/login.jsp");
+		 rd.forward(request, response);
+	}
+ 
+ }

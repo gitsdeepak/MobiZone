@@ -46,10 +46,10 @@ public class GetAllCustomers extends HttpServlet {
         RequestDispatcher rd=null;	
 		List<Customer> customers = dao.getAllCustomers();
 		
-		if(httpSession != null)
+		if(customers!= null)
 			httpSession.setAttribute("customers", customerDao.getAllCustomers());
 
-		rd=request.getRequestDispatcher("/output.jsp");
+		rd=request.getRequestDispatcher("customers.jsp");
 		rd.forward(request, response);
 		
 	/*	if(customers!=null)

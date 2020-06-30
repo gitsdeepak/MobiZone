@@ -7,7 +7,7 @@ import com.niit.shoppingdemoservlet.model.Customer;
 public interface CustomerDao {
 	
 	public boolean addCustomer(Customer c);
-	public Customer findByEmail(String email,String password);
+	public Customer findByEmail(String email);
 	public Customer findByNumber(long number,String password);
 	boolean deleteCustomer(Customer c);
 	boolean updateCustomer(Customer c, String email);
