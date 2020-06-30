@@ -8,7 +8,7 @@
     <%@ include file="WEB-INF/resources/common_css_js.jsp"%>
 </head>
 <body>
-     <%@include file="WEB-INF/pages/navbar.jsp"%>
+     <%@include file="navbar.jsp"%>
      
 	
       <div class="container">
@@ -67,6 +67,6 @@
         <button type="button" class="btn  btn-secondary" onClick="window.location.href='index.jsp'">Back</button>
      </div>
 	         
-       <%@include file="WEB-INF/pages/footer.jsp"%>
+       <%@include file="footer.jsp"%>
 </body>
 </html>

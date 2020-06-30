@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" isELIgnored="false"%>
      <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+     
+    <%@include file="navbar.jsp"%> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -150,17 +152,17 @@
 </head>
 <body>
 
-	<%@include file="WEB-INF/pages/navbar.jsp"%>
+	
 
 	<div class="container-fluid" style="padding-top:40px; padding-bottom :40px;">
 	<div class="row mt-5">
 		<div class="col-md-5 offset-md-4">
 		  <div class="card card-signup my-0">
-		  <%@include file="WEB-INF/pages/message.jsp"%>		  
+		  <%@include file="message.jsp"%>		  
 		    <div class="card-body">		    
           <h5 class="card-title text-center"> Register </h5> 
                  
-			<form class="form-signup" action="RegisterServlet" method="get">		
+			<form class="form-signup" action="RegisterServlet" method="post">		
 			
 			    <div class="form-label-group"> 
 					<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First Name" aria-describedby="emailHelp"> 
@@ -206,6 +208,9 @@
 					<input name="password" type="password" class="form-control" id="password" placeholder="Password" aria-describedby="emailHelp"> 
 			        <label for="password"> Password </label>
 				</div>
+				
+
+				
 				
 				<div class="container text-center">
 				<button class="btn btn-outline-success text-uppercase"> Register </button>

@@ -9,7 +9,7 @@
 </head>
 
 <body>
-       <%@include file="WEB-INF/pages/navbar.jsp"%>
+       <%@include file="navbar.jsp"%>
 
      <div style="padding-top:110px; padding-bottom:20px;">
          <div class="card mx-auto" style="width:25rem;">
@@ -31,7 +31,7 @@
 	    </div>
       </div>
       
-  <%@include file="WEB-INF/pages/footer.jsp"%>
+  <%@include file="footer.jsp"%>
     
 </body>
 </html>

@@ -9,7 +9,7 @@
 </head>
 
 <body>
-       <%@include file="WEB-INF/pages/navbar.jsp"%>
+       <%@include file="navbar.jsp"%>
      
 <div class="container" style="padding-top:100px;">
 <div class="card" style="width: 30rem;">
@@ -25,7 +25,7 @@
 	</div>    
    </div>
 
-    <%@include file="WEB-INF/pages/footer.jsp"%>
+    <%@include file="footer.jsp"%>
     
 </body>
 </html>

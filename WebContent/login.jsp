@@ -147,7 +147,7 @@
 </head>
 <body>
 
-      	<%@include file="WEB-INF/pages/navbar.jsp"%>   
+      	<%@include file="navbar.jsp"%>   
       
   <div class="container" style="padding-top:50px; padding-bottom :5px;">
     <div class="row">
@@ -159,12 +159,12 @@
             <form class="form-signin" action="LoginServlet" method="post">
               
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required autofocus>
                 <label for="inputEmail">Email address</label>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
                 <label for="inputPassword">Password</label>
               </div>
 

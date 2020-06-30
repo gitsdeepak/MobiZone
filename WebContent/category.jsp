@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-  <%@include file="WEB-INF/pages/navbar.jsp"%>
+  <%@include file="navbar.jsp"%>
 	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -10,25 +10,26 @@
    <%@ include file="WEB-INF/resources/common_css_js.jsp"%>
    
 </head>
-<<body>
+<body>
     
-<!-- FORM START -->
-<form method="get">
-<div class="container" style="padding-top:80px;">
-<div class="row">
+         <!-- FORM START -->
+    <form method="get">
+       <div class="container" style="padding-top:80px;">
+          <div class="row">
 
-<div class="col">	
-<div class="display-4" style="padding-bottom:30px;">Add Category</div>
-	<div class="card mx-auto" style="width:25rem;">
-	  <div class="card-body">
-    	<h5 class="card-title text-center">Category</h5>
+         <div class="col">	
+           <div class="display-4" style="padding-bottom:30px;">Add Category</div>
+	         <div class="card mx-auto" style="width:25rem;">
+	          <div class="card-body">
+          	<h5 class="card-title text-center">Category</h5>
 		
 		  		<div class="form-group">
    					<label for="categoryName">Category Name</label>
     				<input type="text" class="form-control" name="categoryName" placeholder="Enter category name">
 			    </div>
 				<button type="submit" formaction="AddCategory" class="btn btn-primary">Add Category</button>
-	
+	</div>
+	</div>
 	 </div>
 	</div>
 </div>
@@ -43,18 +44,18 @@
 
      <!-- FORM START -->
      
-<form method="post">
-<div class="col">
-<div class="display-4" style="padding-bottom:30px;">Manage Category</div>
-<table class="table table-bordered table-hover table-striped">
+       <form method="get">
+         <div class="col">
+           <div class="display-4" style="padding-bottom:30px;">Manage Category</div>
+         <table class="table table-bordered table-hover table-striped">
  
-  <thead>
-    <tr>
-      <th scope="col">Category Id</th>
-      <th scope="col">Category Name</th>
-      <th scope="col">Task</th>
-    </tr>
-  </thead>
+      <thead>
+       <tr>
+         <th scope="col">Category Id</th>
+         <th scope="col">Category Name</th>
+         <th scope="col">Task</th>
+      </tr>
+     </thead>
   
   <tbody>
   <c:forEach items="${categories}"  var="category" > 
@@ -82,6 +83,6 @@
 <button type="button" class="btn  btn-secondary" onClick="window.location.href='admin.jsp'">Back</button>
 </div>
 
-    <%@include file="WEB-INF/pages/footer.jsp"%>
+    <%@include file="footer.jsp"%>
 </body>
 </html>

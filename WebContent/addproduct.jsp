@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
   <!-- add , display(add,update) -->
-  <%@include file="WEB-INF/pages/navbar.jsp"%>
+  <%@include file="navbar.jsp"%>
   	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -77,7 +77,7 @@
       <button type="button" class="btn btn-secondary" onClick="window.location.href='admin.jsp'">Back</button>
      </div>
 
-    <%@include file="WEB-INF/pages/footer.jsp"%>
+    <%@include file="footer.jsp"%>
     
 </body>
 </html>

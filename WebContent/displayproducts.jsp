@@ -10,7 +10,7 @@
 </head>
 
 <body>
-       <%@include file="WEB-INF/pages/navbar.jsp"%>
+       <%@include file="navbar.jsp"%>
 
       <form method="post">
        <div class="container" style="padding-top:50px;">

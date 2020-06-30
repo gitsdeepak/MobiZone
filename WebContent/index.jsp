@@ -10,29 +10,12 @@
     
 </head>
 <body>
-
-	<%@include file="WEB-INF/pages/navbar.jsp"%>
+  
+	<%@include file="navbar.jsp"%>
  <br>
  <br>
-	<a href="WEB-INF/pages/admin.jsp"> admin </a>
-	<br>
-	 <a href="GetAllCustomers"> GetAllCustomers </a>
-	<br>
-	<a href="GetCustomer"> Get Customer </a>
-	<br>
-	<a href="addproduct.jsp"> Adding Product </a>
-	<br>
-	<a href="product.jsp"> Product </a>
-	<br> ${errorMsg}
-	<br>
-	<a href="GetAllProduct">getAllProduct</a>
-	<form action="MailSend" method="post">
-		to<input type="text" name="sendTo"> message<input type="text"
-			name="message"> <input type="submit" value="send mail">
-
-	</form>
-	
-       <%@include file="WEB-INF/pages/slider.jsp"%>
+	 
+       <%@include file="slider.jsp"%>
        
         <%@include file="/productgrid.jsp"%>
        <%@include file="/products.jsp"%>
@@ -48,7 +31,7 @@
               </div>
 		<!-- ABOUT US-->
         
-<%@include file="WEB-INF/pages/footer.jsp"%>
+<%@include file="footer.jsp"%>
 	
 </body>
 </html>
