@@ -27,7 +27,7 @@
            
            <% session.setAttribute("requestFrom","index.jsp"); %>
            
-		   <button type="button" class="btn btn-primary btn-lg" onClick="window.location.href='GetProducts?categoryName=Men'" style="height:50px;">All Mobiles</button>
+		   <button type="button" class="btn btn-primary btn-lg" onClick="window.location.href='GetProducts?categoryName=Mobile'" style="height:50px;">All Mobiles</button>
            </div>
           </div>
         </div>

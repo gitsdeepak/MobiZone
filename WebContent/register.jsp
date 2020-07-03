@@ -8,7 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title> Register Page </title>
-<%@ include file="WEB-INF/resources/common_css_js.jsp"%>
+<%@ include file="resources/common_css_js.jsp"%>
 
 <style>
 :root {
@@ -209,7 +209,6 @@
 			        <label for="password"> Password </label>
 				</div>
 				
-
 				
 				
 				<div class="container text-center">

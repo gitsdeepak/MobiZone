@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>MobiZone</title>
-    <%@ include file="WEB-INF/resources/common_css_js.jsp"%>
+    <%@ include file="resources/common_css_js.jsp"%>
     
 </head>
 <body>
@@ -16,10 +16,8 @@
  <br>
 	 
        <%@include file="slider.jsp"%>
-       
-        <%@include file="/productgrid.jsp"%>
-       <%@include file="/products.jsp"%>
-       
+      
+    
         <!-- ABOUT US-->
               <div id="about_us" class="jumbotron jumbotron-fluid" style="height:18rem;">
                     <div class="container">

@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>${product.name}</title>
 
-		<%@ include file="WEB-INF/resources/common_css_js.jsp"%>
+		<%@ include file="resources/common_css_js.jsp"%>
 		
 <style>
 

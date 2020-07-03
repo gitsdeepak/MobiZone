@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>${product.name}</title>
-    <%@ include file="WEB-INF/resources/common_css_js.jsp"%>
+    <%@ include file="resources/common_css_js.jsp"%>
 </head>
 <body>
      <%@include file="navbar.jsp"%>
@@ -52,8 +52,9 @@
 
            <div style="padding-top:100px">
               <input type="hidden" name="productId" value="${product.id}">
-              <button type="submit" class="btn btn-primary" name="buyNow" value="false" >Add to cart <img src="images/other/cart.png" width="25" height="25" ></button>
-              <button type="submit" class="btn btn-primary" name="buyNow" value="true"  >Buy Now     </button>
+              <button type="submit" class="btn btn-info" name="buyNow" value="false" >Add to cart <i class="fa-fa-shopping-cart"> <!--  </i> <img src="images/other/cart.png" width="25" height="25" > -->
+              </button>
+              <button type="submit" class="btn btn-info" name="buyNow" value="true"  >Buy Now     </button>
            </div>
         </form>
 

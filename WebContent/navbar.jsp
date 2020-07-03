@@ -1,14 +1,13 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+
+<%@page import="com.niit.shoppingdemoservlet.model.Customer" %>
+<%
+
+     Customer customer1 =(Customer) session.getAttribute("current-user");
     
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-   <%@ include file="WEB-INF/resources/common_css_js.jsp"%>
-    
-</head>       
-<body>
+%>
+
+
+
  <!-- Navigation -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-info custom-bg">
   <div class="container">
@@ -21,7 +20,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
      
-     <c:if test="${role ne 'Admin' }">   
+      <c:if test="${role ne 'Admin' }">   
          
               <li class="nav-item">
                 <a class="nav-link" href="#about_us">About</a>
@@ -41,7 +40,9 @@
 				 </div>
               </li>
       </c:if>
-                            
+            
+      
+              <!--              
          	  <li class="nav-item dropdown">
                     <a class="nav-link" 
                      href=
@@ -69,14 +70,17 @@
              	</c:if>
 				             
              	<li class="nav-item">
-        			<a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">
-        		    	Logout <img src="resources/images/other/logout.png">
-          		    </a>
-          		</li>
+             	<a class="nav-link" href="<c:url value="/logout" />"><span
+							class="glyphicon glyphicon-log-out"></span> Logout
+							</a>
+					</li>
              </c:if>
-            
-        
-            </ul> 
+        		<!-- <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">
+        		    	Logout <img src="resources/images/other/logout.png">
+          		    </a> 
+          		</li> -->
+          		       
+              </ul> 
      <!--  <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Categories
@@ -87,20 +91,43 @@
 					<a class="dropdown-item" href="GetProducts?categoryId=${category.id }"> ${category.name}  </a>
 				  </c:forEach >
         </div>
-      </li>
+      </li>    -->
     </ul>
 
-    <ul class="navbar-nav ml-auto">
-    <li class="nav-item active dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Login
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="login.jsp"> Login </a>
-          <a class="dropdown-item" href="register.jsp"> SignUp </a>
-        </div>
-      </li>
-      -->
+
+   <ul class="navbar-nav ml-auto">
+    
+    <%
+       if (customer1 == null)
+        {
+    %>	   
+    	   <li class="nav-item active dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Login
+           </a>
+           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item" href="login.jsp"> Login </a>
+             <a class="dropdown-item" href="register.jsp"> SignUp </a>
+           </div>
+         </li>
+    	
+  <%        } else {
+	  
+	  %>
+	  <li class="nav-item active dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <i class="fas fa-user fa-fw"></i>
+           </a>
+           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item" href="#!"> <%= customer1.getFirstname() %> </a>
+             <a class="dropdown-item" href="LogoutServlet"> Logout </a>
+           </div>
+         </li>
+ <%     }
+    
+    %>
+    
+    
       </ul>
   </div>
   
