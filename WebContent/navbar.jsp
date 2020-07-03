@@ -19,8 +19,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
-     
-      <c:if test="${role ne 'Admin' }">   
+       
          
               <li class="nav-item">
                 <a class="nav-link" href="#about_us">About</a>
@@ -39,7 +38,6 @@
 			       
 				 </div>
               </li>
-      </c:if>
             
       
               <!--              

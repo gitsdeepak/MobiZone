@@ -23,21 +23,21 @@ public class LogoutServlet extends HttpServlet {
 		HttpSession httpSession=request.getSession(false);
 		RequestDispatcher rd;
 		
-		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
+/*	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
         response.setHeader("Pragma", "no-cache"); // HTTP 1.0.
-        response.setDateHeader("Expires", 0); //*/
-        		
+        response.setDateHeader("Expires", 0); //
+        		*/
 		if(httpSession != null)
 		
 		 httpSession.removeAttribute("current-user");
 		 response.sendRedirect("login.jsp");
 		 httpSession.invalidate(); 
 		
-		 rd = request.getRequestDispatcher("/UpdateApplication");
+	/*	 rd = request.getRequestDispatcher("/UpdateApplication");
 		 rd.include(request, response);
 		 
 		 rd=request.getRequestDispatcher("/login.jsp");
-		 rd.forward(request, response);
+		 rd.forward(request, response);  */
 	}
  
  }
