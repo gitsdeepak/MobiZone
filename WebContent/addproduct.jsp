@@ -8,7 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title> Add Product</title>
-          <%@ include file="WEB-INF/resources/common_css_js.jsp"%>
+          <%@ include file="resources/common_css_js.jsp"%>
 </head>
 <body>
          
@@ -56,7 +56,19 @@
  	</div>
   	
  	<div class="form-group col-md-6">
- 	   <input type="number" class="form-control" name="quantity" placeholder="Enter Product Quantity" required>
+ <!--   <input type="number" class="form-control" name="quantity" placeholder="Enter Product Quantity" required>  -->
+ 	  <select class="custom-select" name="productQuantity" >
+              <option value="1"  >1</option>
+              <option value="2"  >2</option>
+              <option value="3"  >3</option>
+              <option value="4"  >4</option>
+              <option value="5"  >5</option>
+              <option value="6"  >6</option>
+              <option value="7"  >7</option>
+              <option value="8"  >8</option>
+              <option value="9"  >9</option>
+              <option value="10" >10</option>
+          </select>
  	</div>
   	</div>
   	  	

@@ -24,7 +24,6 @@ public class Customer implements Serializable {
 	private String username;
 	private String password;
 	private String email;
-	/*s*/
 	private long phone;
 	/* private String answer; */
 	/* private String address; */

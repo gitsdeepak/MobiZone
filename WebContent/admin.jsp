@@ -32,11 +32,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title> Admin Panel </title>
 
-  <%@ include file="WEB-INF/resources/common_css_js.jsp"%> 
+  <%@ include file="resources/common_css_js.jsp"%> 
     
 </head>
 <body>
-
    
      <form>
         <div class="display-3 text-center" style="padding-top:70px;">Admin Panel</div>
@@ -46,9 +45,12 @@
               <div class="col-sm">
                 <div class="card"> 
                   <div class="card-body text-center">
+             <div class="container">   
+                <img style="max-width: 125px" class="img-fluid " src="resources/images/icons/menu.png">
+             </div>
                <h5 class="card-title">Category</h5>
                  <p class="card-text">Customize the category </p>
-      	<button class="btn btn-primary" formaction="category.jsp" > Manage Categories </button>
+      	<button class="btn btn-info" formaction="category.jsp" > Manage Categories </button>
             </div>
           </div>
         </div>
@@ -59,12 +61,12 @@
           <div class="card">
             <div class="card-body text-center">
          <div class="container">   
-            <img style="max-width: 125px" class="img-fluid rounded-circle" src="WEB-INF/resources/icons/multiple-users.png">
+            <img style="max-width: 125px" class="img-fluid rounded-circle" src="resources/images/icons/multiple-users.png">
           </div>
         <h5 class="card-title">Users</h5>
          <p class="card-text">Customize the users </p>
       
-      	<button class="btn btn-primary" formaction="customers.jsp" > View Users </button>
+      	<button class="btn btn-info" formaction="customers.jsp" > View Users </button>
               
         </div>
        </div>
@@ -74,10 +76,13 @@
        <div class="col-sm">
           <div class="card">
              <div class="card-body text-center">
+             <div class="container">   
+            <img style="max-width: 125px" class="img-fluid" src="resources/images/icons/sales.png">
+          </div>
         <h5 class="card-title">Sales</h5>
         <p class="card-text">Track the the sales records </p>
       
-      	<button class="btn btn-primary" formaction="sales.jsp" > View Sales </button>
+      	<button class="btn btn-info" formaction="sales.jsp" > View Sales </button>
               
       </div>
     </div>
@@ -86,12 +91,15 @@
   <div class="col-sm">
     <div class="card">
       <div class="card-body text-center">
+       <div class="container">   
+            <img style="max-width: 125px" class="img-fluid rounded-circle" src="resources/images/icons/product.png">
+          </div>
         <h5 class="card-title">Product</h5>
         <p class="card-text">Customize the products</p>
         
         
         <div class="dropdown">
-  		<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  		<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     		Manage Products
   		</button>
   		
@@ -104,8 +112,7 @@
       </div>
     </div>
   </div>
-</div>
-</div>
+
 
 </body>
 </html>

@@ -16,7 +16,7 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                   <h4><strong> How can we help? </strong></h4>
                   <address>
-                    MobiZone New Delhi <br>
+                    MobiZone New Delhi<br>
                   </address> 
                     <i class="fa fa-fw fa-phone" aria-hidden="true"></i><span class="sr-only">Telephone:</span> <a href="#">+91 123456789</a><br>
                     <i class="fa fa-fw fa-inbox" aria-hidden="true"></i><span class="sr-only">Mail:</span> <a href="#">info@mobizone.com</a>

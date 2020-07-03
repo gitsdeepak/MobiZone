@@ -16,11 +16,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
+import org.apache.commons.io.IOUtils;
 
 import com.niit.shoppingdemoservlet.dao.ProductDao;
 import com.niit.shoppingdemoservlet.dao.ProductDaoImpl;
 import com.niit.shoppingdemoservlet.model.Product;
-import org.apache.commons.io.IOUtils;
 
 /**
  * Servlet implementation class AddProduct

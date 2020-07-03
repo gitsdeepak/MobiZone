@@ -74,8 +74,7 @@ public class LoginServlet extends HttpServlet {
 		 * && c.getRole().trim().equals("ADMIN")
 		 * 
 		 */
-			
-		
+				
 			if (cdao.validate(e, p))
 			{	
 				HttpSession httpSession=request.getSession();
@@ -83,7 +82,7 @@ public class LoginServlet extends HttpServlet {
 				/* System.out.println(c.getRole()); */
 				
 				if(c.getRole().trim().equals("ADMIN")) {
-				rd=request.getRequestDispatcher("admin.jsp");
+				 rd=request.getRequestDispatcher("admin.jsp");
 				 rd.forward(request, response);
 			} 	
 			

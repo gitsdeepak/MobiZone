@@ -1,5 +1,7 @@
 package com.niit.shoppingdemoservlet.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,13 +11,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Product")
-public class Product {
+public class Product implements Serializable {
+	
 	public Product() {}
 	@Id
 	@GeneratedValue
 	(strategy=GenerationType.IDENTITY)
 	private int productId;
-	@Column(unique=true)
+	/*@Column(unique=true)*/
 	private String productName;
 	private String productDescription;
 	private int categoryId;
