@@ -34,7 +34,7 @@ public class AddCategory extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.getWriter().append("Served at: ").append(request.getContextPath()); 
 		RequestDispatcher rd;
 		
 		categoryName		= request.getParameter("categoryName");
@@ -49,7 +49,8 @@ public class AddCategory extends HttpServlet {
 		{
 			if(categoryDao.addCategory(category)) 
 			{
-				System.out.println("Category added");
+			   System.out.println("Category added");
+			   
 			   rd=request.getRequestDispatcher("/GetAllCategory");
 			   rd.forward(request, response);
 			

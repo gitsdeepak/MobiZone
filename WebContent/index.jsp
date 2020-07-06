@@ -29,7 +29,8 @@
               </div>
 		<!-- ABOUT US-->
         
-<%@include file="footer.jsp"%>
+      <%@include file="footer.jsp"%>
+      <%@include file="contact.jsp"%>
 	
 </body>
 </html>

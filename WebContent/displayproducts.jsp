@@ -21,7 +21,7 @@
        <div>
 
         <div>
-          <button type="button" class="btn btn-secondary" onClick="window.location.href='admin.jsp'">Back</button>
+          <button type="button" class="btn btn-outline-secondary" onClick="window.location.href='admin.jsp'">Back</button>
 
            <div class="btn-group float-right" role="group">
 
@@ -55,6 +55,7 @@
 </div>
 </div>
 </div>
+ <br>
      <!-- ################## SORT ###################### -->
 <div class="table-wrapper-scroll-y">
 <table class="table table-hover table-sm table-striped table-bordered table-responsive" >

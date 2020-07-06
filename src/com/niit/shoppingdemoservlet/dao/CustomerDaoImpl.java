@@ -119,15 +119,6 @@ public List<Customer> getcustomerByusername(String username) {
 	// TODO Auto-generated method stub
 	return null;
 }
-/*
-
-
-@Override
-public boolean updateCustomer(Customer c) {
-	// TODO Auto-generated method stub
-	return false;
-}
-*/
 
 @Override
 public Customer findByEmail(String email) {

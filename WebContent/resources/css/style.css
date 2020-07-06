@@ -1,3 +1,38 @@
-.custom-bg{
-	background: #d50000;
+.custom-bg {
+	background: #1e88e5!important;
+}
+
+.admin .card {
+	border: 0px solid #05A;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.admin .card:hover {
+	background: #e2e2e2;
+}
+
+.btn-custom {
+	background: #64b5f6;
+	color: white;
+	font-size: 100%;
+    border-radius: 1.5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s;
+}
+
+.dropdown-menu-custom {
+	border: 1;
+	border-radius: 1.5rem;
+    letter-spacing: .1rem;
+    padding: 0.5rem;
+    transition: all 0.2s;
+}
+
+.dropdown-item-class:hover {
+	background: #64b5f6;
+	border-radius: 1.5rem;
+    font-weight: bold;
 }

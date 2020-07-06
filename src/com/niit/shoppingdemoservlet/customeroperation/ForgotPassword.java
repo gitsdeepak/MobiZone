@@ -17,7 +17,7 @@ public class ForgotPassword extends HttpServlet
 {
 	private static final long serialVersionUID = 1L;
 	private String email;
-	private String answer;
+	private String firstname;
 	private CustomerDao customerDao;
 	
 	/**
@@ -34,10 +34,10 @@ public class ForgotPassword extends HttpServlet
 			email   	= request.getParameter("email");
 			System.out.println(email);
 			//abcdef
-			answer		= request.getParameter("answer");
+			firstname		= request.getParameter("firstname");
 			customerDao = new CustomerDaoImpl(); 
 		
-			if(customerDao.checkUser(email, answer))
+			if(customerDao.checkUser(email, firstname))
 			{
 				request.setAttribute("email",email);
 				System.out.println("SECURITY ANSWER IS CORRECT");

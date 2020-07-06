@@ -31,13 +31,14 @@ public class GetAllCategory extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		super.doGet(request, response);
+		
 		{
 			try 
 			{
 				CategoryDao dao = new CategoryDaoImpl();
 				httpSession = request.getSession(false);
-				RequestDispatcher rd=null;
+				RequestDispatcher rd =null;
+				
 				List<Category> category = dao.getAllCategory();
 				
 				if(category!= null)

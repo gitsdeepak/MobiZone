@@ -39,7 +39,7 @@
    
      <form>
         <div class="display-3 text-center" style="padding-top:70px;">Admin Panel</div>
-          <div class="container">
+          <div class="container admin">
             <div class="row mt-3" style="padding-top:25px;">
            <!-- first col -->  
               <div class="col-sm">
@@ -50,7 +50,7 @@
              </div>
                <h5 class="card-title">Category</h5>
                  <p class="card-text">Customize the category </p>
-      	<button class="btn btn-info" formaction="category.jsp" > Manage Categories </button>
+      	<button class="btn btn-custom" formaction="category.jsp" > Manage Categories </button>
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@
         <h5 class="card-title">Users</h5>
          <p class="card-text">Customize the users </p>
       
-      	<button class="btn btn-info" formaction="customers.jsp" > View Users </button>
+      	<button class="btn btn-custom" formaction="customers.jsp" > View Users </button>
               
         </div>
        </div>
@@ -82,7 +82,7 @@
         <h5 class="card-title">Sales</h5>
         <p class="card-text">Track the the sales records </p>
       
-      	<button class="btn btn-info" formaction="sales.jsp" > View Sales </button>
+      	<button class="btn btn-custom" formaction="sales.jsp" > View Sales </button>
               
       </div>
     </div>
@@ -99,13 +99,13 @@
         
         
         <div class="dropdown">
-  		<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  		<button class="btn btn-custom dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     		Manage Products
   		</button>
   		
-  			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  				<a class="dropdown-item" data-toggle="tooltip" data-placement="right" title="Add a new product"     href="addproduct.jsp">Add Product</a>
-    			<a class="dropdown-item" data-toggle="tooltip" data-placement="right" title="View all the products" href="displayproducts.jsp">Display Products</a>
+  			<div class="dropdown-menu dropdown-menu-custom" aria-labelledby="dropdownMenuButton">
+  				<a class="dropdown-item dropdown-item-class" data-toggle="tooltip" data-placement="right" title="Add a new product"     href="addproduct.jsp">Add Product</a>
+    			<a class="dropdown-item dropdown-item-class" data-toggle="tooltip" data-placement="right" title="View all the products" href="displayproducts.jsp">Display Products</a>
      	 	</div>
 		</div>
       
