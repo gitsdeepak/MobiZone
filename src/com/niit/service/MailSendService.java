@@ -27,7 +27,7 @@ public class MailSendService {
 	        Session session = Session.getDefaultInstance(props,    
 	         new javax.mail.Authenticator() {    
 	         protected PasswordAuthentication getPasswordAuthentication() {    
-	         return new PasswordAuthentication("craftor0001@gmail.com","myproject1001");  
+	         return new PasswordAuthentication("email","password");  
 	         }    
 	        });    
 	        //compose message    
